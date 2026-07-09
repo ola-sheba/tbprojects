@@ -7,10 +7,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends build-essential curl \
+    && apt-get install -y --no-install-recommends \
+        bash \
+        build-essential \
+        curl \
+        ca-certificates \
+        tmux \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install --upgrade pip \
+    && python -m pip install --no-cache-dir asciinema \
     && python -m pip install --no-cache-dir \
         fastapi==0.115.6 \
         uvicorn==0.34.0 \
