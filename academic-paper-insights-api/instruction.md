@@ -42,3 +42,4 @@ requirements.lock
 ```
 
 You may add any additional files needed, but the tests will import `paper_api.main:app` and call the FastAPI app directly.
+
