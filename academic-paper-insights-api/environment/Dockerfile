@@ -13,6 +13,7 @@ RUN apt-get update \
         curl \
         ca-certificates \
         tmux \
+        asciinema \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install --upgrade pip \
