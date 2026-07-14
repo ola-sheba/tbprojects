@@ -1,14 +1,10 @@
 import io
 import importlib
 import json
-import os
 import pathlib
-import re
-import subprocess
 import sys
 from typing import Any
 
-import pytest
 from docx import Document
 from fastapi.testclient import TestClient
 from reportlab.lib.pagesizes import letter
@@ -177,3 +173,4 @@ def test_implementation_is_local_and_not_external_llm_wrapper():
     ]
     found = [marker for marker in forbidden_markers if marker in combined]
     assert not found, f"implementation should use local parsing/NLP, found external-service markers: {found}"
+
