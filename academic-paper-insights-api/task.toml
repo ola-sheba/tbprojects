@@ -1,9 +1,12 @@
+# Task configuration schema version
+version = "2.0"
+
 # Task metadata (author, difficulty, categorization)
 [metadata]
 author_name = "Ola Sheba"
 author_email = "ola.isaiahsheba@ec.snorkel.ai"
 difficulty = "medium"
-category = "software-engineering"
+category = "data-processing"
 # Options for subcategories are: "long_context", "tool_specific", "api_integration", "db_interaction", "ui_building"
 subcategories = [ ]
 # The number of milestones in the task (can be zero if not a milestone task)
@@ -20,11 +23,11 @@ junior_time_estimate_min = 120
 
 # Verifier: runs the test script to check task completion
 [verifier]
-timeout_sec = 450.0
+timeout_sec = 1800.0
 
 # Agent: limits how long the agent can run when attempting the task
 [agent]
-timeout_sec = 900.0
+timeout_sec = 1800.0
 
 # Sandbox environment limits
 [environment]
@@ -33,4 +36,3 @@ build_timeout_sec = 600.0
 cpus = 2
 memory_mb = 4096
 storage_mb = 10240
-
